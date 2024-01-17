@@ -13,26 +13,60 @@
 
   <main class="card-container">
     <div class="img-container">
-      <h1 class="text-logo">ZomboCom</h1>
+      <h1 class="text-logo">Zombo.Com</h1>
       <img src="./assets/stacked-blocks.jpg" alt="black and white stacked blocks">
       <p class="copy-text">Join zombo.com today!</p>
     </div>
 
     <div class="form-container">
-      <h2>Let's get started</h2>
-      <form action="post">
-        <input type="text" name="first" id="first">
-        <input type="text" name="last" id="last">
-        <input type="email" name="email" id="email">
-        <input type="text" name="phone" id="phone">
-        <input type="password" name="pwd" id="pwd">
-        <input type="password" name="pwd_retype" id="pwd_retype">
-        <button>
+      <h2 class="form-title">Let's get started</h2>
+      <form action="/" method="post">
+
+          <div class="form-group">
+            <label for="first">first name*</label>
+            <input type="text" name="first" id="first" required>
+            <div class="error-msg aria-live"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="last">last name*</label>
+            <input type="text" name="last" id="last" required>
+            <div class="error-msg aria-live"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">email*</label>
+            <input type="email" name="email" id="email" required>
+            <div class="error-msg aria-live"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">phone number*</label>
+            <input type="text" name="phone" id="phone" required>
+            <div class="error-msg aria-live"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">password*</label>
+            <input type="password" name="pwd" id="pwd" required>
+            <div class="error-msg aria-live"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="pwd_retype">retype password*</label>
+            <input type="password" name="pwd_retype" id="pwd_retype" required>
+            <div class="error-msg aria-live"></div>
+          </div>
+
+        <button class="form-submit" id="submit-btn">
           Create Account
         </button>
       </form>
+      <span class="thankyou">
+        
+      </span>
     </div>
   </main>
-
+  <script src="script.js"></script>
 </body>
 </html>

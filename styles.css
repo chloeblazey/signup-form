@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 /*
   VARIABLES DECLARATION ON ROOT
 */
 :root {
   --charcoal: #333;
+  --ash: rgb(211, 211, 211);
+  --light-ash: rgb(211, 211, 211, .5);
+  --error-red: rgb(175, 51, 10);
 }
 
 
@@ -14,6 +17,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Libre Baskerville', serif;
 }
 
 /*
@@ -23,6 +27,8 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
+  width: 100vw;
+  font-size: 16px;
 }
 
 /*
@@ -35,12 +41,11 @@
   height: 100%;
   background-color: #FFF;
   color: var(--charcoal);
-  font-size: 16px;
+
 }
 
 .text-logo {
-  font-family: 'Libre-Baskerville', serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   padding: 1rem;
 }
@@ -50,7 +55,6 @@
 }
 
 .copy-text {
-  font-family: 'Libre-Baskerville', serif;
   font-weight: 400;
   font-size: 1.5rem;
   padding: 1rem 2rem 4rem;
@@ -61,9 +65,71 @@
   FORM SECTION
 */
 .form-container {
-  background-color: rgb(34, 34, 34);
+  background-color: var(--charcoal);
+  color: var(--ash);
+  padding: 1rem 4rem;
+  width: 100%;
+  text-align: left;
 }
 
-h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.form-title {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-top: 8rem;
 }
+
+.form-group {
+  position: relative;
+  margin: 3.5rem 0rem;
+}
+
+.thankyou {
+  margin-top: 1rem;
+}
+
+/*
+  FORM INPUTS
+*/
+label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 225ms ease-out;
+}
+
+.focused label {
+  transform: translateY(-125%);
+  color: var(--light-ash);
+}
+
+input {
+  background-color: var(--charcoal);
+  border: 0;
+  border-bottom: thin solid var(--ash);
+  color: var(--ash);
+  font-size: 1rem;
+}
+
+button.form-submit {
+  background-color: var(--ash);
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*
+  FORM VALIDATION STYLING
+*/
+div.error input {
+  border-bottom: thin solid var(--error-red);
+}
+
+.error-msg {
+  padding-top: .5rem;
+  color: var(--error-red);
+  font-style: italic;
+}
+
+
